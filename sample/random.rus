@@ -1,0 +1,12 @@
+; random list generator
+
+DO(10)
+::
+	; print current index
+	[{$}]
+	
+	; generate random number 1 ~ 10
+	[{RANDOM(1, 10)}]
+:
+
+; end of source

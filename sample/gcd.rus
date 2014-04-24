@@ -1,0 +1,28 @@
+; 최대공약수 구하기
+
+VAR a
+VAR b
+VAR r
+
+; initialize a
+=(a, 64)
+
+; initialize b
+=(b, 12)
+
+DO(-1)
+::
+	=(r, a)
+	=(a, b)
+	=(b, %(r, b))
+
+	IF(<=(b, 0))
+	::
+		BREAK
+	:
+:
+
+; print gcd
+["gcd is " {a} ]
+
+; end of source

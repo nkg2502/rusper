@@ -1,0 +1,47 @@
+; 소수 판별 프로그램
+
+VAR prime
+VAR i
+VAR flag
+
+OUTPUT("prime_result.txt")
+
+; initialize prime
+=(prime, 131)
+
+; initialize flag
+=(flag, 0)
+
+IF(&&(<(2, prime), !=(0, %(prime, 2))))
+::
+	; initialize i
+	=(i, 3)
+
+	DO(-1)
+	::
+		IF(<=(prime, i))
+		::
+			=(flag, 1)
+			BREAK	
+		:
+
+		IF(==(0, %(prime, i)))
+		::
+			BREAK	
+		:
+
+		=(i, +(i, 2))
+	:
+:
+
+IF(==(1, flag))
+::
+	[{prime} "is prime."]
+:
+
+IF(==(0, flag))
+::
+	[{prime} "is not prime."]
+:
+
+; end of source

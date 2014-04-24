@@ -1,0 +1,16 @@
+; 1 부터 10까지 합 구하기
+VAR sum
+
+; initialize sum
+=(sum, 0)
+
+; repeat 10 times
+DO(10)
+::
+	=(sum, +(sum, +($, 1)))
+
+	; print sum
+	[{sum}]
+:
+
+; end of source
